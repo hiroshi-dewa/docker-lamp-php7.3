@@ -1,10 +1,9 @@
-FROM php:5.6.28-apache
-# FROM php:7.1-apache #php7をインストールしたい方はこちらを有効に
+FROM php:7.3-apache
 
 MAINTAINER docker-web
 
 RUN apt-get update \
-    && apt-get -y install vim wget lsb-release libicu-dev mysql-client \
+    && apt-get -y install vim wget lsb-release libicu-dev default-mysql-client \
     && docker-php-ext-install pdo_mysql mysqli intl
 # mod_rewriteを 有効に
 RUN a2enmod rewrite

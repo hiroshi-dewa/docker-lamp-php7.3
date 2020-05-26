@@ -1,20 +1,16 @@
 # docker-lamp
 Dockerand docker-compose
 
-- Apache
+- Apache (current version: 2)
 	- mod_rewrite
-	- GD
-- php 5.6.28 or 7.1
+	- GD (current version: 2)
+- php 7.3
 - MySql 5.7
 - PhpMyAdmin
 
 * Operation check
-- php5.6.28
-	- ✅ baserCMS 3.0.16
-	- ✅ Wordpress 4.9.8
-- php7.1
-	- ✅ baserCMS 4.1.3
-	- ✅ Wordpress 4.9.8
+  - php7.3
+    - ✅ baserCMS 4.3.4
 
 ## Advance preparation
 
@@ -24,7 +20,7 @@ Dockerand docker-compose
 ## How to set up
 
 ```
-$ cd dockker-lamp-php5.6
+$ cd dockker-lamp-php7.3
 $ docker-compose build
 $ docker-compose up
 ```
@@ -47,21 +43,6 @@ You can access [http://localhost:8080/](http://localhost:8080/)
   ├ logs : server log
 ```
 
-
-## How to change PHP version
-
-Please edit ```docker/web/Dockerfile```
-
-### php5.6
-```Dockerfile:docker/web/Dockerfile
-FROM php:5.6.28-apache
-# FROM php:7.1-apache
-```
-### php7.1
-```Dockerfile:docker/web/Dockerfile
-# FROM php:5.6.28-apache
-FROM php:7.1-apache
-```
 
 ## MySQL
 
